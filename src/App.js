@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import{ Routes,Route } from 'react-router-dom';
+// import{ Route } from 'react-router-dom';
+import{BrowserRouter} from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Home from './Component/Home';
+import About from './Component/About';
+import Contact from './Component/Contact';
+import Policy from './Component/Policy';
+import Services from './Component/Services';
+import Error from './Component/Error';
+import List from './Component/List';
+import Footer from './Component/Footer';
+import Account from './Component/Account';
+import Register from './Component/Register';
+
+const App=()=>{
+ return(
+  <>
+  <List/>
+  <BrowserRouter>
+    <Routes>
+            <Route  path="/home" element={<Home/>}/>
+            <Route  path="/about" element={<About/>}/>
+            <Route  path="/contact" element={<Contact/>}/>
+            <Route  path="/policy" element={<Policy/>}/>
+            <Route  path="/services" element={<Services/>}/>
+            <Route  path="/error" element={<Error/>}/>
+            <Route  path="/account" element={<Account/>}/>
+            <Route  path="/register" element={<Register/>}/>
+
+    </Routes>
+
+   </BrowserRouter>
+   <Footer/>
+   </>
+ );
+
 }
-
 export default App;
