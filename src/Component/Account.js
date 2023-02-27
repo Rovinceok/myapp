@@ -26,7 +26,7 @@ return(
          <input type="password" ></input>
     </div>
     <div>
-         <label htmlFor='Password'>Password   </label>
+         <label htmlFor='Password'> Confirm Password   </label>
          <input type="password"></input>
     </div>
 
